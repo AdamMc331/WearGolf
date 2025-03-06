@@ -49,7 +49,7 @@ android {
         }
     }
 
-    namespace = "com.adammcneilly.weargolf"
+    namespace = "com.adammcneilly.weargolf.mobile"
 }
 
 dependencies {
@@ -60,6 +60,7 @@ dependencies {
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.room.runtime)
+    implementation(libs.androidx.wear.remote.interactions)
     implementation(libs.coil.compose)
     implementation(libs.coil.okhttp)
     implementation(libs.compose.material)

@@ -1,4 +1,4 @@
-package com.adammcneilly.weargolf.theme
+package com.adammcneilly.weargolf.mobile.theme
 
 import android.annotation.TargetApi
 import android.os.Build

@@ -1,4 +1,4 @@
-package com.adammcneilly.weargolf.theme
+package com.adammcneilly.weargolf.mobile.theme
 
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Shapes
