@@ -14,7 +14,6 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
@@ -31,7 +30,6 @@ import androidx.wear.remote.interactions.RemoteActivityHelper
 import androidx.wear.tooling.preview.devices.WearDevices
 import com.adammcneilly.weargolf.wear.R
 import com.adammcneilly.weargolf.wear.presentation.theme.TemplateTheme
-import kotlinx.coroutines.launch
 
 class MainActivity : ComponentActivity() {
     override fun onNewIntent(intent: Intent) {
@@ -55,7 +53,6 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun WearApp(greetingName: String) {
-    val scope = rememberCoroutineScope()
     val context = LocalContext.current
 
     TemplateTheme {
@@ -74,13 +71,7 @@ fun WearApp(greetingName: String) {
                     val intent = Intent(Intent.ACTION_VIEW)
                         .addCategory(Intent.CATEGORY_BROWSABLE)
                         .setData(uri)
-                    try {
-                        scope.launch {
-                            remoteActivityHelper.startRemoteActivity(intent)
-                        }
-                    } catch (e: Exception) {
-                        println("ADAMLOG - ERR: ${e.printStackTrace()}")
-                    }
+                    remoteActivityHelper.startRemoteActivity(intent)
                 },
             ) {
                 Text(

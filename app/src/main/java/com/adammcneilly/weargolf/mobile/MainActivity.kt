@@ -11,14 +11,11 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import androidx.concurrent.futures.await
 import androidx.core.net.toUri
 import androidx.wear.remote.interactions.RemoteActivityHelper
 import com.adammcneilly.weargolf.mobile.theme.WearGolfTheme
-import kotlinx.coroutines.launch
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,8 +23,6 @@ class MainActivity : ComponentActivity() {
 
         setContent {
             enableEdgeToEdge()
-
-            val scope = rememberCoroutineScope()
 
             WearGolfTheme {
                 Surface(
@@ -40,13 +35,7 @@ class MainActivity : ComponentActivity() {
                             val intent = Intent(Intent.ACTION_VIEW)
                                 .addCategory(Intent.CATEGORY_BROWSABLE)
                                 .setData(uri)
-                            try {
-                                scope.launch {
-                                    remoteActivityHelper.startRemoteActivity(intent).await()
-                                }
-                            } catch (e: Exception) {
-                                println("ADAMLOG - ERR: ${e.printStackTrace()}")
-                            }
+                            remoteActivityHelper.startRemoteActivity(intent)
                         },
                         modifier = Modifier
                             .padding(top = 24.dp),
