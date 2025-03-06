@@ -10,7 +10,7 @@ android {
 
     defaultConfig {
         applicationId = "com.adammcneilly.weargolf.wear"
-        minSdk = libs.versions.minSdk.get().toInt()
+        minSdk = 30
         targetSdk = libs.versions.compileSdk.get().toInt()
         versionCode = 1
         versionName = "1.0"
