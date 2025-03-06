@@ -49,7 +49,7 @@ android {
         }
     }
 
-    namespace = "com.adammcneilly.weargolf"
+    namespace = "com.adammcneilly.weargolf.mobile"
 }
 
 dependencies {

@@ -1,4 +1,4 @@
-package com.adammcneilly.weargolf
+package com.adammcneilly.weargolf.mobile
 
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp
