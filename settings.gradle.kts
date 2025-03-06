@@ -14,3 +14,4 @@ dependencyResolutionManagement {
 }
 rootProject.name = "Wear Golf"
 include(":app")
+include(":wear")
