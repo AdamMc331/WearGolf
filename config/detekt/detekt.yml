@@ -1,0 +1,12 @@
+# Note that this is a slimmed version of a detekt config file that only includes behavior we
+# want to override for our application. This is done by using `buildUponDefaultConfig` in the gradle
+# configuration.
+
+naming:
+  active: true
+  FunctionNaming:
+    active: true
+    excludes: ['**/test/**', '**/androidTest/**', '**/commonTest/**', '**/jvmTest/**', '**/androidUnitTest/**', '**/androidInstrumentedTest/**', '**/jsTest/**', '**/iosTest/**']
+    functionPattern: '[a-z][a-zA-Z0-9]*'
+    excludeClassPattern: '$^'
+    ignoreAnnotated: ['Composable']
