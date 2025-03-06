@@ -4,9 +4,8 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
 
-
     <application
-        android:name=".mobile.WearGolfApp"
+        android:name=".WearGolfApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -19,6 +18,12 @@
             android:exported="true"
             android:theme="@style/Theme.AppTheme.NoActionBar"
             android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <data android:scheme="weargolf" android:host="openfromwatch" />
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

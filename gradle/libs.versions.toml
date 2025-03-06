@@ -27,6 +27,7 @@ sortDependencies = "0.14"
 playServicesWearable = "18.0.0"
 composeMaterial = "1.2.1"
 composeFoundation = "1.2.1"
+wearRemoteInteractions = "1.1.0"
 wearToolingPreview = "1.0.0"
 coreSplashscreen = "1.0.1"
 tiles = "1.4.0"
@@ -47,6 +48,7 @@ androidx-room-compiler = { module = "androidx.room:room-compiler", version.ref =
 androidx-room-runtime = { module = "androidx.room:room-runtime", version.ref = "room" }
 androidx-test-espresso-core = { module = "androidx.test.espresso:espresso-core", version.ref = "espresso" }
 androidx-test-junit = { module = "androidx.test.ext:junit", version.ref = "androidxTest" }
+androidx-wear-remote-interactions = { module = "androidx.wear:wear-remote-interactions", version.ref = "wearRemoteInteractions" }
 coil-compose = { module = "io.coil-kt.coil3:coil-compose", version.ref = "coil" }
 coil-okhttp = { module = "io.coil-kt.coil3:coil-network-okhttp", version.ref = "coil" }
 compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBom" }

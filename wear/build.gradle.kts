@@ -53,6 +53,7 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.watchface.complications.data.source.ktx)
+    implementation(libs.androidx.wear.remote.interactions)
     implementation(libs.androidx.wear.tooling.preview)
     implementation(libs.compose.ui)
     implementation(libs.horologist.compose.tools)
