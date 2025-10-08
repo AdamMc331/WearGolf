@@ -35,7 +35,7 @@ tilesMaterial = "1.5.0"
 tilesTooling = "1.5.0"
 tilesToolingPreview = "1.5.0"
 horologistComposeTools = "0.6.23"
-horologistTiles = "0.6.23"
+horologistTiles = "0.7.15"
 watchfaceComplicationsDataSourceKtx = "1.2.1"
 
 [libraries]
